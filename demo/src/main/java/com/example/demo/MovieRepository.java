@@ -30,6 +30,10 @@ public class MovieRepository {
                 movie.getName(),movie.getRating(),movie.getId());
     }
 
+    public int delete(Movie movie){
+        return jdbcTemplate.update("delete from movie where id=?",movie.getId());
+    }
+
 
 
 }
